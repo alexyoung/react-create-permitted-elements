@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="../node_modules/react/dist/react.js"></script>
+    <script src="../node_modules/react-dom/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+  </head>
+  <body>
+    <h1>Create Permitted Elements</h1>
+    <h2>Simple tags example</h2>
+    <p>This should render bold and italic tags.</p>
+    <div id="example-1"></div>
+    <div id="example-2"></div>
+    <script src="../index.js"></script>
+    <script type="text/babel">
+function Example1() {
+  return createPermittedElements('p', 'This <b>is bold</b> and this <i>is italic</i> text.', ['b', 'i']);
+}
+
+function Example2() {
+  return createPermittedElements('p', 'This <b><i>is bold and italic at the same time for some reason</i></b>, would you really do that?', ['b', 'i']);
+}
+
+ReactDOM.render(<Example1 />, document.getElementById('example-1'));
+ReactDOM.render(<Example2 />, document.getElementById('example-2'));
+    </script>
+  </body>
+</html>

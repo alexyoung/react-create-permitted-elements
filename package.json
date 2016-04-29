@@ -1,0 +1,23 @@
+{
+  "name": "react-create-permitted-elements",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/tap -R dot test.js"
+  },
+  "keywords": [],
+  "author": "Alex R. Young",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 0.13.0"
+  },
+  "devDependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "tap": "^5.7.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}
